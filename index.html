@@ -8,13 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="高强的博客">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="高强的博客">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="高强的博客">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -46,7 +49,7 @@
 			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">Gao Qiang</a></h1>
 		</hgroup>
 		
 
@@ -104,7 +107,7 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Gao Qiang</h1>
 			</hgroup>
 			
 			
@@ -152,19 +155,209 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-git-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-三、git工作流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/git-1/">一、git基础</a>
+      <a class="article-title" href="/三、git工作流/">三、git工作流</a>
     </h1>
   
 
         
-        <a href="/2019/09/02/git-1/" class="archive-article-date">
+        <a href="/三、git工作流/" class="archive-article-date">
+  	<time datetime="2019-09-03T01:47:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>git 工作流分类：<br>集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、</p>
+<p>一、集中式工作流（重要）<br>       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。<br>工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）<br>1.克隆远程git仓库到本地（中央仓库）<br>2.敲代码<br>3.git pull –rebase遍机  报冲突<br>4.解决冲突<br>5.git add. 保存到暂存区      git rebase –continue继续遍机<br>6.git push<br>注：如果没有冲突，不需要4.5步<br>缺点：各个开发者直接操作远程仓库的master分支，而master分支很重要，作为主分支有时候是直接展示给用户看的，故不建议直接对master分支进行开发</p>
+<p>二、功能分支工作流（常用）<br>        不直接对远程git仓库的master主分支进行操作，新建远程git仓库分支（此处为iteam），先在本地进行开发完，上传到此新建的远程git仓库分支上。然后pull request提交合并请求，由协作者验证请求，同意后，新建的远程git仓库分支才合并到远程git仓库分支的主分支上。</p>
+<p>1.新建远程git仓库，并设置保护某个分支（一般master为主分支，且被保护），本地进行remote连接</p>
+<p>2.默认在本地git仓库上的master分支上进行开发，一般都会在本地git仓库新建一个分支进行开发<br>          git  branch lunbotu     git  checkout  lunbotu</p>
+<p>3.在本地lunbotu分支上敲代码，完成后提交到本地<br>          git add.     git  commit  -m “轮播图写完了”</p>
+<p>4.推送到远程git仓库的某个不被保护的分支上<br>          git  push  origin  iteam</p>
+<p>5.在远程git仓库上进行分支合并（此处为master分支和iteam分支）<br>活跃分支——创建合并请求，可以指派能看到请求的其他协作开发者，（一般指派给前端老大）<br>该远程git仓库的其他协作开发者能看到这个分支合并请求，可查看“文件变动” “代码提交状态” “对话内容” ，可进行评论、驳回、同意合并请求。（被指派的协作开发者都可以同意合并请求）</p>
+<p>三、Gitflow工作流（繁琐、大项目）</p>
+<pre><code>基于功能分支工作流的思想，较复杂。 在远程git仓库上，master分支只存储写好的需要发布的重要大版本，develop分支相当于以前的master，保存所有人开发的对应各个功能版本，feature分支对应某个功能下的不同开发阶段版本（如feature-lunbotu）。相对于功能分支工作流，仅仅多了一层“master”工作流，用develop替代了master分支的作用。
+
+ 共有三层分支：master分支下的一个重要版本对应此重要大版本的develop分支下的好几个功能版本，develop分支下的一个功能版本对应此功能的feature分支下好几个的开发阶段版本。(第三层也可是对应某个bug（develop）的分支，也可是对应某个问题（develop）的分支，分支名字自定义，此处以对应某个功能（develop）的feature分支为例)</code></pre><p>注：远程git仓库上有默认的master、develop分支</p>
+<p>注：master分支上的重要大版本可在”版本发布”中查看</p>
+<p>1.新建远程git仓库，本地进行remote连接</p>
+<p>2.直接在本地创建develop分支，并且能跟远程git仓库上的develop分支相连接<br>        git  checkout develop </p>
+<p>3.在本地通过feature分支，基于本地develop分支进行lunbotu开发<br>        git  branch  feature-lunbotu     git  checkout  feature-lunbotu</p>
+<p>4.在本地feature-lunbotu分支上敲代码，完成后提交到本地<br>        git add.     git  commit  -m  “轮播图写完了”<br>注：此时便可直接推送到远程git仓库上的feature-lunbotu分支上，也可以继续基于本地develop进行开发</p>
+<p>5.切换到本地develop分支上<br>        git checkout  develop</p>
+<p>6.拉取最新的远程git仓库的develop的到本地，将当前本地git仓库的feature-lunbotu分支和拉取到本地的远程git仓库的develop分支合并<br>       git pull origin develop    git merge feature-lunbotu</p>
+<p>7.推送当前本地git仓库的develop分支到远程git仓库的develop分支上<br>       git push</p>
+<p>8.删掉本地的develop分支<br>       git  branch  -d  feature-lunbotu</p>
+<p>9.在本地通过feature分支，基于本地develop分支再进行daohanglan开发<br>       git  branch  feature-daohanglan  git  checkout  feature-daohanglan</p>
+<p>10.在本地feature-lunbotu分支上敲代码，完成后提交到本地<br>       git add.     git  commit  -m  “导航栏写完了”</p>
+<p>11.切换到本地develop分支上<br>       git checkout  develop</p>
+<p>12.拉取最新的远程git仓库的develop的到本地，将当前本地git仓库的feature-lunbotu分支和拉取到本地的远程git仓库的develop分支合并<br>       git fetch origin develop         git merge feature-daohanglan</p>
+<p>13..推送当前本地git仓库的develop分支到远程git仓库的develop分支上<br>       git push</p>
+<p>14.发布一个远程git仓库master分支下的重要版本。在本地新建一个release分支，并切换<br>       git branch release-0.1      git checkout  release-0.1   </p>
+<p>15.切换到本地develop分支上，将其合并到本地 release-0.1分支上<br>git  checkout  develop       git merge  release-0.1     </p>
+<p>16.切换到本地master分支上，将其合并到本地 release-0.1分支上<br>git  checkout  master         git merge  release-0.1     </p>
+<p>17.推送到远程git仓库master分支上<br>git  push</p>
+<p>18.在本地打上0.1版本标签，并推送到远程git仓库中<br>git  tag  0.1   git  push –tags</p>
+<p>四、Forking工作流（用于开放性的开源项目）<br>开源的远程git仓库下的项目（在设置内新建仓库后把仓库设为公有的），可让陌生人（非协作开发者）点击派生，在自己的账号下生成一个一模一样的远程git仓库（复制下来，与之前的仓库没有关系，相互独立），便可在自己本地对此复制下来的远程git仓库进行操作，完成后可以向仓库项目的原开发者提出建议，供其决定合不合并。<br>复制别人的仓库，添加上游仓库的地址，往自己复制下来的仓库传代码，向原作者提交合并请求</p>
+<p>1.复制（克隆）别人的远程git仓库到本地（中央仓库）<br>git   clone   url                                      注：在url上添加github上的用户名和密码</p>
+<p>2.在复制到本地的仓库进行代码开发<br>git add.    git  commit  -m  “增加了某个功能”</p>
+<p>3.拉取最新的原远程git仓库。此处直接pull拉取的是自己复制下来的仓库，所以需要先跟最新的原远程git仓库建立新的remote连接后，再拉取<br>git remote  add  upsteam url            git pull  upsteam master              :q 退出默认请求设置<br>4.推送到非协作开发者自己的复制下来的最新的远程git仓库master分支上<br>git push</p>
+<p>5.此非协作开发者在此复制下来的仓库项目下创建一个合并请求，基准分支就是原仓库的master分支，对比分支就是当前操作者复制下来操作后的仓库的master分支</p>
+<p>6.原开发者在远程git仓库上查看合并请求进行分支合并<br>该远程git仓库的其他协作开发者能看到这个分支合并请求，可查看“文件变动” “代码提交状态” “对话内容” ，可进行评论、驳回、同意合并请求。（被指派的协作开发者都可以同意合并请求）</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/三、git工作流/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-二、远程git仓库使用指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/二、远程git仓库使用指令/">二、远程git仓库使用指令</a>
+    </h1>
+  
+
+        
+        <a href="/二、远程git仓库使用指令/" class="archive-article-date">
+  	<time datetime="2019-09-03T01:45:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>远程git仓库服务器：github(开源)  码云 开源中国  公司自己会建立自己的远程仓库服务器：如蝉壳的git服务器(不开源)    远程git仓库可当做云盘使用<br>github：找资料、上传代码<br>可在远程git仓库服务器上创建远程git仓库（不使用选定的文件和模板初始化新的git仓库），服务器会给予这个远程git仓库一个url地址</p>
+<p>一、远程git仓库两种使用方式：<br>1.以本地git仓库为基准：在本地写代码，在本地git仓库中提交了多个版本，然后push传到远程仓库服务器上的某个git仓库中备份<br>2.以远程git仓库为基准：把公司的远程仓库服务器中的某个远程git仓库拉取到本地（clone到本地仓库）中，然后在本地写代码，最后传到远程仓库服务器的某个git仓库上<br>新建一个空文件夹，然后在文件夹内git bash here打开git命令行进行clone拉取远程git仓库文件夹到此文件夹内，把通过编译器vs code打开此文件夹进行编写即可。</p>
+<p>二、远程git仓库操作指令：(在本地git仓库操作上的补充)<br>1.git remote add orgin url ： 把本地仓库和远程git仓库建立连接（仅仅是个指向关系），常用于本地git仓库开发，并把远程git仓库代名起为默认的origin<br>git remote : 查看与本地git仓库连接的远程git仓库代名，可一对多 （此处得出 origin）<br>git remote -v：查看与本地git仓库连接的远程git仓库的详细信。<br>一个远程git仓库对应fetch拉取和push上传两个远程git仓库信息。一般情况下push和fetch的是同一个远程git仓库，但有时候fetch拉取的是主仓库（只可读，不可写），push上传的是主仓库下的副本<br>git push origin master :  推送当前本地git仓库分支到远程git仓库上的master分支上（在本地更新的版本，必须push到远程git仓库上才能实现跟远程git仓库的同步）<br>git push -u origin master： 表示一直把本地git仓库推送到此远程git仓库的master分支上，之后再推送，直接输 git push即可。想更换推送的目远程git仓库的时候，重新输入名字和url即可<br>git branch：查看本地git仓库的所有分支<br>git branch -va： 查看本地git仓库和有连接关系的远程git仓库的所有分支，另外还有各仓库最新的版本代号和说明信息。</p>
+<p>日常开发常用指定顺序：<br>    1. git add.     2. git commit -m  “带轮播图的版本1.0”    3. git push (origin master)</p>
+<p>三、以远程仓库为基准进行开发：<br>第一阶段：单人开发：在本地git仓库独立开发，上传到远程git仓库实现同步保存：</p>
+<ol>
+<li>新建一个空文件夹，在文件夹内git bash here打开git命令行，初始化一个空的本地git仓库文件夹<br>  git  init</li>
+<li>在本地git仓库文件夹内的工作目录下进行代码编写，编写完成，提交新版本<br>  git  add .       git  commit -m “带轮播图版本 1.0”</li>
+<li>继续在本地git仓库进行新版本代码编写<br>  git  add .       git  commit -m “带轮播图版本 2.0”</li>
+<li>本地git仓库初步代码编写已完成，想上传到远程git仓库内进行保存，或想与他人一起进行协作开发     即在远程git仓库服务器（如github）上，创建一个空的远程git仓库（仓库名、拥有者等），会获得此仓库的url地址<br>5 .建立本地git仓库和远程git仓库的连接，并且可以查看本地git仓库连接的远程git仓库的详细信息。<br>  git remote add orgin url      git remote -v</li>
+<li>推送当前本地git仓库分支到远程git仓库master分支上<br> git push origin master </li>
+<li>在本地git仓库继续新版本的代码编写<br>git  add.       git  commit -m “带轮播的版本 3.0”</li>
+<li>继续推送当前本地git仓库分支到远程git仓库master分支上<br>git push -u origin master<br>注：加了-u之后之后再推送到此远程git仓库master分支上，直接输 git push即可</li>
+<li>查看本地git仓库的所有分支和远程git仓库的所有分支的说明信息。<br> git branch      git branch -va</li>
+</ol>
+<p>主要指令：   git  init     git remote add orgin url     git add.     git commit -m “”     git push</p>
+<p>第二阶段：多人协作开发：在第一阶段的基础上与他人一起进行(此处开发者为Boy，协作者为Girl)<br>注：如果在本机进行不同协作者开发的测试，可通过git config 切换用户实现 </p>
+<ol>
+<li>在建立的远程git仓库上添加协作者的名字，此协作者在远程git仓库服务器上就可以看到自己参与协作的远程git仓库。</li>
+<li>协作者自己新建一个空文件夹，在文件夹内git bash here打开git命令行，把第一阶段已完成三个版本开发的远程git仓库克隆到本地，生成一个本地git仓库，会自动与此远程git仓库建立remote连接（代名为默认的origin，且之后可以直接pull推送到此远程git仓库），并可以查看克隆的远程git仓库的版本历史<br>  git clone url         注意：要以协作者的用户名和密码进行clone克隆   <a href="http://Girl:Girl@" target="_blank" rel="noopener">http://Girl:Girl@</a><br>  cd gaoqiangGitHub<br>  git log</li>
+<li>在当前克隆到本地的本地git仓库文件夹内的工作目录下进行代码编写，编写完成，提交新版本 <pre><code>git  add .       git  commit -m &quot;带音乐播放器的版本 1.0&quot;</code></pre></li>
+<li>协作者Gril继续在本地git仓库进行新版本代码编写<pre><code>git  add .       git  commit -m &quot;带音乐播放器的版本 2.0&quot;</code></pre></li>
+<li>此时之前的开发者Boy继续在他的本地git仓库进行新版本代码编写<pre><code>git  add .       git  commit -m &quot;带轮播图版本 4.0&quot;</code></pre></li>
+<li>协作者Girl完成这一阶段的开发，推送当前本地git仓库分支到远程git仓库master分支上<pre><code>git push (origin master) </code></pre>此时push会报错。因为其他的开发者已经先提交了远程git仓库上的新版本，此时的远程git仓库已经不同于协作者Girl一开始克隆下来的仓库，</li>
+<li>所以协作者Girl需要先拉取最新的有带轮播图版本 4.0新版本的远程git仓库分支到本地，然后再通过merge将当前本地git仓库分支和拉取到本地的远程git仓库master分支合并。此两步操作也可以合为一步<pre><code>git fetch origin          git merge origin/master   →  git  pull  (origin master)     :q退出</code></pre>注：fetch拉取最新的远程git仓库的时候，不会更改本地git仓库，也会显示克隆之前拉取到本地的远程git仓库与最新远程git仓库的区别<br>注：通过git branch -vv 查看当前分支追踪的分支，git  pull 简写可直接pull到本地gti仓库分支remote连接的分支上</li>
+<li>此时报merge冲突，因为音乐播放器分支和轮播图分支 两个分支都对同一个html文件进行了修改，会有冲突，可根据提示手动修改冲突：采用当前更改、采用传入更改、保留双方更改<br>注意：无论有没有冲突，merge指令都会commit提交一个merge解决冲突后的新版本，便在最后push的时候提交了merge解决冲突后的新版本和融合功能后的新版本 两个新版本</li>
+<li>修改完冲突后再将此修改完merge冲突的新版本在本地git仓库分支commit保存提交，即可在本地git仓库主分支上生成最终的融合后的最新稳定版本。<pre><code>git  add.      git  commit -m &quot;融合了轮播图版本4.0和音乐播放器2.0&quot;   </code></pre></li>
+<li>重新推送当前本地git仓库分支到远程git仓库的master分支上（此时推送的是merge解决冲突后的新版本和融合功能后的新版本 两个新版本）<pre><code>git push (origin master) </code></pre>注：可去掉提交merge解决冲突后的新版本的指令操作（对应上面的第7步）：<pre><code>git fetch origin          git rebase origin/master   → git  pull --rebase</code></pre> git rebase 遍机：把本地git仓库分支的新版本直接推送到当前远程git仓库分支作为最新的版本（不进行merge分支合并），如果没有冲突，直接生成，如果有冲突的话遍机暂停，先解决冲突后add. 保存修改冲突后的版本到暂存区，然后继续遍机 git rebase – continue，最后再git  push，即可在远程git仓库分支上仅生成一个融合功能后的新版本。<br>主要指令： git pull    git push</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/二、远程git仓库使用指令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-一、git基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/一、git基础/">一、git基础</a>
+    </h1>
+  
+
+        
+        <a href="/一、git基础/" class="archive-article-date">
   	<time datetime="2019-09-02T13:55:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
 </a>
         
@@ -173,33 +366,33 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>一、git基础指令：<br>git配置：<br>git config –global user.name “beikegaoqiang”<br>git config –global user.email “<a href="mailto:gaoqiang_bkjx@163.com" target="_blank" rel="noopener">gaoqiang_bkjx@163.com</a>“<br>注：去掉–global，即表示在当前文件下的用户名和email<br>获取git仓库：<br>从现有的文件目录中初始化本地git仓库： git init<br>克隆现有的远程git仓库： git clone url </p>
-<img src="/2019/09/02/git-1/3.png">
-<img src="/2019/09/02/git-1/4.png">
-<img src="/2019/09/02/git-1/5.png">
+<img src="/2019/09/02/一、git基础/3.png">
+<img src="/2019/09/02/一、git基础/4.png">
+<img src="/2019/09/02/一、git基础/5.png">
 
 <p>二、git分支开发操作： (以本地git仓库开发为例)</p>
-<img src="/2019/09/02/git-1/6.png">
-<img src="/2019/09/02/git-1/7.png">
+<img src="/2019/09/02/一、git基础/6.png">
+<img src="/2019/09/02/一、git基础/7.png">
 
 <p>：<br>1.主分支为默认分支master，在主分支上生成稳定版本。</p>
 <p>2.建立书写轮播图的新分支iss53，在新分支上，基于稳定版本进行自己所负责的html文件中轮播图代码编写(此处为轮播图)</p>
-<img src="/2019/09/02/git-1/9.png">
+<img src="/2019/09/02/一、git基础/9.png">
 
 <p>3.当l轮播图写到一半时，被要求去修复稳定版本的bug。所以先在自己新建的分支上提交自己未完成的代码形成新版本C3</p>
-<img src="/2019/09/02/git-1/10.png">
+<img src="/2019/09/02/一、git基础/10.png">
 
 <p>4.然后切换到主分支，再新建一个用于修复稳定版本中html文件中的bug的新分支hotfix，修复完成后，在此分支上提交修复后的新版本C4</p>
-<img src="/2019/09/02/git-1/11.png">
+<img src="/2019/09/02/一、git基础/11.png">
 
 <p>5.切换回主分支，将修复完bug的分支hotfit和主分支master合并(get merge hotfix)。主分支上的稳定版本就变成了修复bug后的新版本。</p>
-<img src="/2019/09/02/git-1/12.png">
+<img src="/2019/09/02/一、git基础/12.png">
 
 <p>6.回到自己负责的轮播图分支，继续自己的轮播图代码编写。完成后，在此分支上提交有轮播图的新版本C5</p>
-<img src="/2019/09/02/git-1/13.png">
+<img src="/2019/09/02/一、git基础/13.png">
 
 <p>7.切换回主分支，将有轮播图的分支和主分支合并(get merge iss53)。在此本地git仓库主分支上的稳定版本就变成了有轮播图的新版本。<br>注：此时merge会报错，因为在修复bug分支hotfit和轮播图分支iss53中 两个分支都对同一个html文件进行了修改，会有冲突，可根据提示手动修改冲突：采用当前更改、采用传入更改、保留双方更改。<br>修改完后再进行新版本的提交(add.  commit-m)，便可在本地git仓库主分支上生成最终的最新稳定版本。</p>
-<img src="/2019/09/02/git-1/14.png">
-<img src="/2019/09/02/git-1/15.png">
+<img src="/2019/09/02/一、git基础/14.png">
+<img src="/2019/09/02/一、git基础/15.png">
 
 <p>注：       先拉取再合并： 此处为本地git仓库开发，在远程git仓库开发中时，在最后将有轮播图的分支和主分支合并(merge)之前，需要先git ferch origin 拉取远程仓库中已修复了bug并合成生成新版本的远程git仓库的分支，然后再通过merge进行本地git仓库的分支和远程git仓库的分支合并 git merge origin/master，此时才报冲突，再进行修改</p>
 <p>远程git仓库的url有SSH和HTTPS两种：<br>HTTPS：本质上每一次push都需要用建立此远程git仓库的github的用户名和密码。本地有存储机制，可以存贮。<br>SSH：提交本机的秘钥给此远程git仓库，所以只要在本机上进行push推送，就不需要用户名和密码。SSH密钥设置方法：右上角设置       SSH and GPG keys      generate SSH keys   Generating a new SSH  按照要求进行指令操作 这个过程中需要输入用户注册时的邮箱 可修改密匙存放的本地地址  可加密存放密钥（私钥、公钥）的文件夹   打开文件夹，将公钥以记事本方式打开，复制下来，然后在SSH keys页面中 点击 New SSH key 粘贴到Key内 完成Add添加</p>
@@ -215,7 +408,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/02/git-1/">展开全文 >></a>
+          <a class="article-more-a" href="/一、git基础/">展开全文 >></a>
         </p>
       
 
@@ -252,12 +445,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/newblog/">newblog</a>
+      <a class="article-title" href="/newblog/">newblog</a>
     </h1>
   
 
         
-        <a href="/2019/09/02/newblog/" class="archive-article-date">
+        <a href="/newblog/" class="archive-article-date">
   	<time datetime="2019-09-02T10:16:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
 </a>
         
@@ -307,7 +500,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/02/newblog/">展开全文 >></a>
+          <a class="article-more-a" href="/newblog/">展开全文 >></a>
         </p>
       
 
@@ -344,12 +537,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/hello-world/">Hello World</a>
+      <a class="article-title" href="/hello-world/">Hello World</a>
     </h1>
   
 
         
-        <a href="/2019/09/02/hello-world/" class="archive-article-date">
+        <a href="/hello-world/" class="archive-article-date">
   	<time datetime="2019-09-02T10:15:02.442Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
 </a>
         
@@ -382,7 +575,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/02/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/hello-world/">展开全文 >></a>
         </p>
       
 
@@ -422,7 +615,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 Gao Qiang
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

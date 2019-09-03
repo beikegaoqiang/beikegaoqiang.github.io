@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>三、git工作流 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="git 工作流分类：集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、 一、集中式工作流（重要）       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）1.克隆远程git仓库到本地（中央仓库）2.敲代码3.git pull –rebase遍机  报冲突4.解决冲突">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/09/02/hello-world/index.html">
+<meta property="og:title" content="三、git工作流">
+<meta property="og:url" content="http://yoursite.com/三、git工作流/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="git 工作流分类：集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、 一、集中式工作流（重要）       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）1.克隆远程git仓库到本地（中央仓库）2.敲代码3.git pull –rebase遍机  报冲突4.解决冲突">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-02T10:15:02.443Z">
+<meta property="og:updated_time" content="2019-09-03T01:52:14.821Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="三、git工作流">
+<meta name="twitter:description" content="git 工作流分类：集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、 一、集中式工作流（重要）       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）1.克隆远程git仓库到本地（中央仓库）2.敲代码3.git pull –rebase遍机  报冲突4.解决冲突">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -50,7 +50,7 @@
 			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">Gao Qiang</a></h1>
 		</hgroup>
 		
 
@@ -108,7 +108,7 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Gao Qiang</h1>
 			</hgroup>
 			
 			
@@ -154,39 +154,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-三、git工作流" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      三、git工作流
     </h1>
   
 
         
-        <a href="/2019/09/02/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-02T10:15:02.442Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+        <a href="/三、git工作流/" class="archive-article-date">
+  	<time datetime="2019-09-03T01:47:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p>git 工作流分类：<br>集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、</p>
+<p>一、集中式工作流（重要）<br>       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。<br>工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）<br>1.克隆远程git仓库到本地（中央仓库）<br>2.敲代码<br>3.git pull –rebase遍机  报冲突<br>4.解决冲突<br>5.git add. 保存到暂存区      git rebase –continue继续遍机<br>6.git push<br>注：如果没有冲突，不需要4.5步<br>缺点：各个开发者直接操作远程仓库的master分支，而master分支很重要，作为主分支有时候是直接展示给用户看的，故不建议直接对master分支进行开发</p>
+<p>二、功能分支工作流（常用）<br>        不直接对远程git仓库的master主分支进行操作，新建远程git仓库分支（此处为iteam），先在本地进行开发完，上传到此新建的远程git仓库分支上。然后pull request提交合并请求，由协作者验证请求，同意后，新建的远程git仓库分支才合并到远程git仓库分支的主分支上。</p>
+<p>1.新建远程git仓库，并设置保护某个分支（一般master为主分支，且被保护），本地进行remote连接</p>
+<p>2.默认在本地git仓库上的master分支上进行开发，一般都会在本地git仓库新建一个分支进行开发<br>          git  branch lunbotu     git  checkout  lunbotu</p>
+<p>3.在本地lunbotu分支上敲代码，完成后提交到本地<br>          git add.     git  commit  -m “轮播图写完了”</p>
+<p>4.推送到远程git仓库的某个不被保护的分支上<br>          git  push  origin  iteam</p>
+<p>5.在远程git仓库上进行分支合并（此处为master分支和iteam分支）<br>活跃分支——创建合并请求，可以指派能看到请求的其他协作开发者，（一般指派给前端老大）<br>该远程git仓库的其他协作开发者能看到这个分支合并请求，可查看“文件变动” “代码提交状态” “对话内容” ，可进行评论、驳回、同意合并请求。（被指派的协作开发者都可以同意合并请求）</p>
+<p>三、Gitflow工作流（繁琐、大项目）</p>
+<pre><code>基于功能分支工作流的思想，较复杂。 在远程git仓库上，master分支只存储写好的需要发布的重要大版本，develop分支相当于以前的master，保存所有人开发的对应各个功能版本，feature分支对应某个功能下的不同开发阶段版本（如feature-lunbotu）。相对于功能分支工作流，仅仅多了一层“master”工作流，用develop替代了master分支的作用。
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+ 共有三层分支：master分支下的一个重要版本对应此重要大版本的develop分支下的好几个功能版本，develop分支下的一个功能版本对应此功能的feature分支下好几个的开发阶段版本。(第三层也可是对应某个bug（develop）的分支，也可是对应某个问题（develop）的分支，分支名字自定义，此处以对应某个功能（develop）的feature分支为例)</code></pre><p>注：远程git仓库上有默认的master、develop分支</p>
+<p>注：master分支上的重要大版本可在”版本发布”中查看</p>
+<p>1.新建远程git仓库，本地进行remote连接</p>
+<p>2.直接在本地创建develop分支，并且能跟远程git仓库上的develop分支相连接<br>        git  checkout develop </p>
+<p>3.在本地通过feature分支，基于本地develop分支进行lunbotu开发<br>        git  branch  feature-lunbotu     git  checkout  feature-lunbotu</p>
+<p>4.在本地feature-lunbotu分支上敲代码，完成后提交到本地<br>        git add.     git  commit  -m  “轮播图写完了”<br>注：此时便可直接推送到远程git仓库上的feature-lunbotu分支上，也可以继续基于本地develop进行开发</p>
+<p>5.切换到本地develop分支上<br>        git checkout  develop</p>
+<p>6.拉取最新的远程git仓库的develop的到本地，将当前本地git仓库的feature-lunbotu分支和拉取到本地的远程git仓库的develop分支合并<br>       git pull origin develop    git merge feature-lunbotu</p>
+<p>7.推送当前本地git仓库的develop分支到远程git仓库的develop分支上<br>       git push</p>
+<p>8.删掉本地的develop分支<br>       git  branch  -d  feature-lunbotu</p>
+<p>9.在本地通过feature分支，基于本地develop分支再进行daohanglan开发<br>       git  branch  feature-daohanglan  git  checkout  feature-daohanglan</p>
+<p>10.在本地feature-lunbotu分支上敲代码，完成后提交到本地<br>       git add.     git  commit  -m  “导航栏写完了”</p>
+<p>11.切换到本地develop分支上<br>       git checkout  develop</p>
+<p>12.拉取最新的远程git仓库的develop的到本地，将当前本地git仓库的feature-lunbotu分支和拉取到本地的远程git仓库的develop分支合并<br>       git fetch origin develop         git merge feature-daohanglan</p>
+<p>13..推送当前本地git仓库的develop分支到远程git仓库的develop分支上<br>       git push</p>
+<p>14.发布一个远程git仓库master分支下的重要版本。在本地新建一个release分支，并切换<br>       git branch release-0.1      git checkout  release-0.1   </p>
+<p>15.切换到本地develop分支上，将其合并到本地 release-0.1分支上<br>git  checkout  develop       git merge  release-0.1     </p>
+<p>16.切换到本地master分支上，将其合并到本地 release-0.1分支上<br>git  checkout  master         git merge  release-0.1     </p>
+<p>17.推送到远程git仓库master分支上<br>git  push</p>
+<p>18.在本地打上0.1版本标签，并推送到远程git仓库中<br>git  tag  0.1   git  push –tags</p>
+<p>四、Forking工作流（用于开放性的开源项目）<br>开源的远程git仓库下的项目（在设置内新建仓库后把仓库设为公有的），可让陌生人（非协作开发者）点击派生，在自己的账号下生成一个一模一样的远程git仓库（复制下来，与之前的仓库没有关系，相互独立），便可在自己本地对此复制下来的远程git仓库进行操作，完成后可以向仓库项目的原开发者提出建议，供其决定合不合并。<br>复制别人的仓库，添加上游仓库的地址，往自己复制下来的仓库传代码，向原作者提交合并请求</p>
+<p>1.复制（克隆）别人的远程git仓库到本地（中央仓库）<br>git   clone   url                                      注：在url上添加github上的用户名和密码</p>
+<p>2.在复制到本地的仓库进行代码开发<br>git add.    git  commit  -m  “增加了某个功能”</p>
+<p>3.拉取最新的原远程git仓库。此处直接pull拉取的是自己复制下来的仓库，所以需要先跟最新的原远程git仓库建立新的remote连接后，再拉取<br>git remote  add  upsteam url            git pull  upsteam master              :q 退出默认请求设置<br>4.推送到非协作开发者自己的复制下来的最新的远程git仓库master分支上<br>git push</p>
+<p>5.此非协作开发者在此复制下来的仓库项目下创建一个合并请求，基准分支就是原仓库的master分支，对比分支就是当前操作者复制下来操作后的仓库的master分支</p>
+<p>6.原开发者在远程git仓库上查看合并请求进行分支合并<br>该远程git仓库的其他协作开发者能看到这个分支合并请求，可查看“文件变动” “代码提交状态” “对话内容” ，可进行评论、驳回、同意合并请求。（被指派的协作开发者都可以同意合并请求）</p>
 
       
 
@@ -266,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/02/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/三、git工作流/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,15 +304,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/02/newblog/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          newblog
-        
-      </div>
-    </a>
   
+    <a href="/二、远程git仓库使用指令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二、远程git仓库使用指令</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -329,7 +349,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 Gao Qiang
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
