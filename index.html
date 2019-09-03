@@ -416,7 +416,7 @@
 
       
         
-          <center><font size="3" color="#FF0000"> git 工作流分类 </font> </center>
+          <center><font size="5" color="#ff6700"> git 工作流分类 </font> </center>
 集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、
 
 <p>一、集中式工作流（重要）<br>       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。<br>工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）<br>1.克隆远程git仓库到本地（中央仓库）<br>2.敲代码<br>3.git pull –rebase遍机  报冲突<br>4.解决冲突<br>5.git add. 保存到暂存区      git rebase –continue继续遍机<br>6.git push<br>注：如果没有冲突，不需要4.5步<br>缺点：各个开发者直接操作远程仓库的master分支，而master分支很重要，作为主分支有时候是直接展示给用户看的，故不建议直接对master分支进行开发</p>

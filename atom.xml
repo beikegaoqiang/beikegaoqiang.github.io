@@ -45,11 +45,11 @@
     <link href="http://yoursite.com/%E4%B8%89%E3%80%81git%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
     <id>http://yoursite.com/三、git工作流/</id>
     <published>2019-09-03T01:47:26.000Z</published>
-    <updated>2019-09-03T12:27:05.567Z</updated>
+    <updated>2019-09-03T12:45:23.852Z</updated>
     
     <summary type="html">
     
-      &lt;center&gt;&lt;font size=&quot;3&quot; color=&quot;#FF0000&quot;&gt; git 工作流分类 &lt;/font&gt; &lt;/center&gt;
+      &lt;center&gt;&lt;font size=&quot;5&quot; color=&quot;#ff6700&quot;&gt; git 工作流分类 &lt;/font&gt; &lt;/center&gt;
 集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、
 
 &lt;p&gt;一、集中式工作流（重要）&lt;br&gt;       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。&lt;br&gt;工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）&lt;br&gt;1.克隆远程git仓库到本地（中央仓库）&lt;br&gt;2.敲代码&lt;br&gt;3.git pull –rebase遍机  报冲突&lt;br&gt;4.解决冲突&lt;br&gt;5.git add. 保存到暂存区      git rebase –continue继续遍机&lt;br&gt;6.git push&lt;br&gt;注：如果没有冲突，不需要4.5步&lt;br&gt;缺点：各个开发者直接操作远程仓库的master分支，而master分支很重要，作为主分支有时候是直接展示给用户看的，故不建议直接对master分支进行开发&lt;/p&gt;
