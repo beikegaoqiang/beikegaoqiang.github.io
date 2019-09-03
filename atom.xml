@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-03T12:13:17.038Z</updated>
+  <updated>2019-09-03T12:35:26.239Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>test</title>
+    <link href="http://yoursite.com/test/"/>
+    <id>http://yoursite.com/test/</id>
+    <published>2019-09-03T12:35:03.000Z</published>
+    <updated>2019-09-03T12:35:26.239Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;dnsoandosanodnsaondoksandoooooooooooooooooooooooooooooooooooooooooogbadsjbfdasfjibadsnfijkadf&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>三、git工作流</title>
     <link href="http://yoursite.com/%E4%B8%89%E3%80%81git%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
     <id>http://yoursite.com/三、git工作流/</id>
     <published>2019-09-03T01:47:26.000Z</published>
-    <updated>2019-09-03T12:13:17.038Z</updated>
+    <updated>2019-09-03T12:27:05.567Z</updated>
     
     <summary type="html">
     
@@ -44,14 +68,14 @@
   
   <entry>
     <title>二、远程git仓库使用指令</title>
-    <link href="http://yoursite.com/%E4%BA%8C%E3%80%81%E8%BF%9C%E7%A8%8Bgit%E4%BB%93%E5%BA%93%E4%BD%BF%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
-    <id>http://yoursite.com/二、远程git仓库使用指令/</id>
+    <link href="http://yoursite.com/%E4%BA%8C%E3%80%81%E8%BF%9C%E7%A8%8Bgit%E4%BD%BF%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+    <id>http://yoursite.com/二、远程git使用指令/</id>
     <published>2019-09-03T01:45:34.000Z</published>
-    <updated>2019-09-03T12:15:13.605Z</updated>
+    <updated>2019-09-03T12:33:38.957Z</updated>
     
     <summary type="html">
     
-      &lt;center&gt;&lt;font size=&quot;2&quot; color=&quot;#ff6700&quot;&gt;远程git仓库服务器&lt;/font&gt; &lt;/center&gt;
+      &lt;center&gt;&lt;font size=&quot;5&quot; color=&quot;#ff6700&quot;&gt;远程git仓库服务器&lt;/font&gt; &lt;/center&gt;
 github(开源)  码云 开源中国  公司自己会建立自己的远程仓库服务器：如蝉壳的git服务器(不开源)    远程git仓库可当做云盘使用
 github：找资料、上传代码
 可在远程git仓库服务器上创建远程git仓库（不使用选定的文件和模板初始化新的git仓库），服务器会给予这个远程git仓库一个url地址
@@ -73,7 +97,7 @@ github：找资料、上传代码
     <link href="http://yoursite.com/%E4%B8%80%E3%80%81git%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/一、git基础/</id>
     <published>2019-09-02T13:55:54.000Z</published>
-    <updated>2019-09-03T12:15:39.709Z</updated>
+    <updated>2019-09-03T12:28:30.988Z</updated>
     
     <summary type="html">
     
@@ -106,7 +130,7 @@ git config --global user.email &quot;gaoqiang_bkjx@163.com&quot;
     <link href="http://yoursite.com/newblog/"/>
     <id>http://yoursite.com/newblog/</id>
     <published>2019-09-02T10:16:48.000Z</published>
-    <updated>2019-09-02T13:53:55.713Z</updated>
+    <updated>2019-09-03T12:30:23.114Z</updated>
     
     <summary type="html">
     
@@ -114,7 +138,7 @@ git config --global user.email &quot;gaoqiang_bkjx@163.com&quot;
       
         
         
-          &lt;h2 id=&quot;这是高强de第一个博客文章啊&quot;&gt;&lt;a href=&quot;#这是高强de第一个博客文章啊&quot; class=&quot;headerlink&quot; title=&quot;这是高强de第一个博客文章啊&quot;&gt;&lt;/a&gt;这是高强de第一个博客文章啊&lt;/h2&gt;&lt;!DOCTYPE html&gt;
+          &lt;h2 id=&quot;这是高强de第一个博客文章&quot;&gt;&lt;a href=&quot;#这是高强de第一个博客文章&quot; class=&quot;headerlink&quot; title=&quot;这是高强de第一个博客文章&quot;&gt;&lt;/a&gt;这是高强de第一个博客文章&lt;/h2&gt;&lt;!DOCTYPE html&gt;
 &lt;html
         
       

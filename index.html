@@ -300,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/二、远程git仓库使用指令/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/三、git工作流/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gao Qiang">
@@ -319,7 +319,180 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/二、远程git仓库使用指令/" itemprop="url">二、远程git仓库使用指令</a></h1>
+                <a class="post-title-link" href="/三、git工作流/" itemprop="url">三、git工作流</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-03T09:47:26+08:00">
+                2019-09-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/工作流/" itemprop="url" rel="index">
+                    <span itemprop="name">工作流</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/三、git工作流/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="三、git工作流/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <center><font size="3" color="#FF0000"> git 工作流分类 </font> </center>
+集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、
+
+<p>一、集中式工作流（重要）<br>       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。<br>工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）<br>1.克隆远程git仓库到本地（中央仓库）<br>2.敲代码<br>3.git pull –rebase遍机  报冲突<br>4.解决冲突<br>5.git add. 保存到暂存区      git rebase –continue继续遍机<br>6.git push<br>注：如果没有冲突，不需要4.5步<br>缺点：各个开发者直接操作远程仓库的master分支，而master分支很重要，作为主分支有时候是直接展示给用户看的，故不建议直接对master分支进行开发</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/三、git工作流/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/二、远程git使用指令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Gao Qiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/头像.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="北科程序员">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/二、远程git使用指令/" itemprop="url">二、远程git仓库使用指令</a></h1>
         
 
         <div class="post-meta">
@@ -383,9 +556,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/二、远程git仓库使用指令/#comments" itemprop="discussionUrl">
+                <a href="/二、远程git使用指令/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="二、远程git仓库使用指令/" itemprop="commentCount"></span>
+                        data-disqus-identifier="二、远程git使用指令/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -416,13 +589,13 @@
 
       
         
-          <center><font size="2" color="#ff6700">远程git仓库服务器</font> </center>
+          <center><font size="5" color="#ff6700">远程git仓库服务器</font> </center>
 github(开源)  码云 开源中国  公司自己会建立自己的远程仓库服务器：如蝉壳的git服务器(不开源)    远程git仓库可当做云盘使用
 github：找资料、上传代码
 可在远程git仓库服务器上创建远程git仓库（不使用选定的文件和模板初始化新的git仓库），服务器会给予这个远程git仓库一个url地址
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/二、远程git仓库使用指令/#more" rel="contents">
+            <a class="btn" href="/二、远程git使用指令/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -735,7 +908,7 @@ git config --global user.email "gaoqiang_bkjx@163.com"
       
         
           
-            <h2 id="这是高强de第一个博客文章啊"><a href="#这是高强de第一个博客文章啊" class="headerlink" title="这是高强de第一个博客文章啊"></a>这是高强de第一个博客文章啊</h2><!DOCTYPE html>
+            <h2 id="这是高强de第一个博客文章"><a href="#这是高强de第一个博客文章" class="headerlink" title="这是高强de第一个博客文章"></a>这是高强de第一个博客文章</h2><!DOCTYPE html>
 <html lang="en">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="UTF-8">
@@ -835,7 +1008,7 @@ git config --global user.email "gaoqiang_bkjx@163.com"
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
