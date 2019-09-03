@@ -47,14 +47,18 @@
     <link href="http://yoursite.com/%E4%BA%8C%E3%80%81%E8%BF%9C%E7%A8%8Bgit%E4%BB%93%E5%BA%93%E4%BD%BF%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
     <id>http://yoursite.com/二、远程git仓库使用指令/</id>
     <published>2019-09-03T01:45:34.000Z</published>
-    <updated>2019-09-03T11:22:10.863Z</updated>
+    <updated>2019-09-03T12:02:33.008Z</updated>
     
     <summary type="html">
     
-      &lt;center&gt;&lt;font size=&quot;7&quot; color=&quot;#ff6700&quot;&gt;远程git仓库服务器：&lt;/font&gt; &lt;/center&gt;
-github(开源)  码云 开源中国  公司自己会建立自己的远程仓库服务器：如蝉壳的git服务器(不开源)    远程git仓库可当做云盘使用
-github：找资料、上传代码
-可在远程git仓库服务器上创建远程git仓库（不使用选定的文件和模板初始化新的git仓库），服务器会给予这个远程git仓库一个url地址
+      
+      
+        
+        
+          &lt;center&gt;&lt;font size=&quot;7&quot; color=&quot;#ff6700&quot;&gt;远程git仓库服务器：&lt;/font&gt; &lt;/center&gt;
+github(开源)  码云 开源中国  公司自己会建立自己的远程仓库服务器：如蝉壳的git服务器(不开源)   
+        
+      
     
     </summary>
     
