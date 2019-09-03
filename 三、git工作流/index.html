@@ -53,16 +53,14 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/1.jpg?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/1.jpg?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.jpg?v=5.1.4">
 
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -74,23 +72,25 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="北科程序员" type="application/atom+xml">
 
 
 
 
 
-<meta name="description" content="git 工作流分类：集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、 一、集中式工作流（重要）       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）1.克隆远程git仓库到本地（中央仓库）2.敲代码3.git pull –rebase遍机  报冲突4.解决冲突">
+
+<meta name="description" content="git 工作流分类：   集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、  一、集中式工作流（重要）       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）1.克隆远程git仓库到本地（中央仓库）2.敲代码3.git pull –rebase遍机  报冲突4">
 <meta name="keywords" content="git工作流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三、git工作流">
 <meta property="og:url" content="http://yoursite.com/三、git工作流/index.html">
-<meta property="og:site_name" content="北科大">
-<meta property="og:description" content="git 工作流分类：集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、 一、集中式工作流（重要）       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）1.克隆远程git仓库到本地（中央仓库）2.敲代码3.git pull –rebase遍机  报冲突4.解决冲突">
+<meta property="og:site_name" content="北科程序员">
+<meta property="og:description" content="git 工作流分类：   集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、  一、集中式工作流（重要）       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）1.克隆远程git仓库到本地（中央仓库）2.敲代码3.git pull –rebase遍机  报冲突4">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-03T09:01:23.491Z">
+<meta property="og:updated_time" content="2019-09-03T11:21:58.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三、git工作流">
-<meta name="twitter:description" content="git 工作流分类：集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、 一、集中式工作流（重要）       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）1.克隆远程git仓库到本地（中央仓库）2.敲代码3.git pull –rebase遍机  报冲突4.解决冲突">
+<meta name="twitter:description" content="git 工作流分类：   集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、  一、集中式工作流（重要）       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）1.克隆远程git仓库到本地（中央仓库）2.敲代码3.git pull –rebase遍机  报冲突4">
 
 
 
@@ -100,7 +100,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":null}},
@@ -126,7 +126,7 @@
 
 
 
-  <title>三、git工作流 | 北科大</title>
+  <title>三、git工作流 | 北科程序员</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">北科大</span>
+        <span class="site-title">北科程序员</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -184,7 +184,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -194,7 +194,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -204,7 +204,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-list-alt"></i> <br>
             
             分类
           </a>
@@ -214,17 +214,59 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
 
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -242,207 +284,6 @@
   <div id="posts" class="posts-expand">
     
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/三、git工作流/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gao Qiang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/头像.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北科大">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">三、git工作流</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-03T09:47:26+08:00">
-                2019-09-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>git 工作流分类：<br>集中式工作流、功能分支工作流、Gitflow工作流、Forking工作流、</p>
-<p>一、集中式工作流（重要）<br>       每一个开发人员直接操作远程git仓库分支，之前的例子中就是使用的集中式工作流进行开发。<br>工作流程：（以远程仓库为基准，以git rebase遍机为推送方式）<br>1.克隆远程git仓库到本地（中央仓库）<br>2.敲代码<br>3.git pull –rebase遍机  报冲突<br>4.解决冲突<br>5.git add. 保存到暂存区      git rebase –continue继续遍机<br>6.git push<br>注：如果没有冲突，不需要4.5步<br>缺点：各个开发者直接操作远程仓库的master分支，而master分支很重要，作为主分支有时候是直接展示给用户看的，故不建议直接对master分支进行开发</p>
-<p>二、功能分支工作流（常用）<br>        不直接对远程git仓库的master主分支进行操作，新建远程git仓库分支（此处为iteam），先在本地进行开发完，上传到此新建的远程git仓库分支上。然后pull request提交合并请求，由协作者验证请求，同意后，新建的远程git仓库分支才合并到远程git仓库分支的主分支上。</p>
-<p>1.新建远程git仓库，并设置保护某个分支（一般master为主分支，且被保护），本地进行remote连接</p>
-<p>2.默认在本地git仓库上的master分支上进行开发，一般都会在本地git仓库新建一个分支进行开发<br>          git  branch lunbotu     git  checkout  lunbotu</p>
-<p>3.在本地lunbotu分支上敲代码，完成后提交到本地<br>          git add.     git  commit  -m “轮播图写完了”</p>
-<p>4.推送到远程git仓库的某个不被保护的分支上<br>          git  push  origin  iteam</p>
-<p>5.在远程git仓库上进行分支合并（此处为master分支和iteam分支）<br>活跃分支——创建合并请求，可以指派能看到请求的其他协作开发者，（一般指派给前端老大）<br>该远程git仓库的其他协作开发者能看到这个分支合并请求，可查看“文件变动” “代码提交状态” “对话内容” ，可进行评论、驳回、同意合并请求。（被指派的协作开发者都可以同意合并请求）</p>
-<p>三、Gitflow工作流（繁琐、大项目）</p>
-<pre><code>基于功能分支工作流的思想，较复杂。 在远程git仓库上，master分支只存储写好的需要发布的重要大版本，develop分支相当于以前的master，保存所有人开发的对应各个功能版本，feature分支对应某个功能下的不同开发阶段版本（如feature-lunbotu）。相对于功能分支工作流，仅仅多了一层“master”工作流，用develop替代了master分支的作用。
-
- 共有三层分支：master分支下的一个重要版本对应此重要大版本的develop分支下的好几个功能版本，develop分支下的一个功能版本对应此功能的feature分支下好几个的开发阶段版本。(第三层也可是对应某个bug（develop）的分支，也可是对应某个问题（develop）的分支，分支名字自定义，此处以对应某个功能（develop）的feature分支为例)</code></pre><p>注：远程git仓库上有默认的master、develop分支</p>
-<p>注：master分支上的重要大版本可在”版本发布”中查看</p>
-<p>1.新建远程git仓库，本地进行remote连接</p>
-<p>2.直接在本地创建develop分支，并且能跟远程git仓库上的develop分支相连接<br>        git  checkout develop </p>
-<p>3.在本地通过feature分支，基于本地develop分支进行lunbotu开发<br>        git  branch  feature-lunbotu     git  checkout  feature-lunbotu</p>
-<p>4.在本地feature-lunbotu分支上敲代码，完成后提交到本地<br>        git add.     git  commit  -m  “轮播图写完了”<br>注：此时便可直接推送到远程git仓库上的feature-lunbotu分支上，也可以继续基于本地develop进行开发</p>
-<p>5.切换到本地develop分支上<br>        git checkout  develop</p>
-<p>6.拉取最新的远程git仓库的develop的到本地，将当前本地git仓库的feature-lunbotu分支和拉取到本地的远程git仓库的develop分支合并<br>       git pull origin develop    git merge feature-lunbotu</p>
-<p>7.推送当前本地git仓库的develop分支到远程git仓库的develop分支上<br>       git push</p>
-<p>8.删掉本地的develop分支<br>       git  branch  -d  feature-lunbotu</p>
-<p>9.在本地通过feature分支，基于本地develop分支再进行daohanglan开发<br>       git  branch  feature-daohanglan  git  checkout  feature-daohanglan</p>
-<p>10.在本地feature-lunbotu分支上敲代码，完成后提交到本地<br>       git add.     git  commit  -m  “导航栏写完了”</p>
-<p>11.切换到本地develop分支上<br>       git checkout  develop</p>
-<p>12.拉取最新的远程git仓库的develop的到本地，将当前本地git仓库的feature-lunbotu分支和拉取到本地的远程git仓库的develop分支合并<br>       git fetch origin develop         git merge feature-daohanglan</p>
-<p>13..推送当前本地git仓库的develop分支到远程git仓库的develop分支上<br>       git push</p>
-<p>14.发布一个远程git仓库master分支下的重要版本。在本地新建一个release分支，并切换<br>       git branch release-0.1      git checkout  release-0.1   </p>
-<p>15.切换到本地develop分支上，将其合并到本地 release-0.1分支上<br>git  checkout  develop       git merge  release-0.1     </p>
-<p>16.切换到本地master分支上，将其合并到本地 release-0.1分支上<br>git  checkout  master         git merge  release-0.1     </p>
-<p>17.推送到远程git仓库master分支上<br>git  push</p>
-<p>18.在本地打上0.1版本标签，并推送到远程git仓库中<br>git  tag  0.1   git  push –tags</p>
-<p>四、Forking工作流（用于开放性的开源项目）<br>开源的远程git仓库下的项目（在设置内新建仓库后把仓库设为公有的），可让陌生人（非协作开发者）点击派生，在自己的账号下生成一个一模一样的远程git仓库（复制下来，与之前的仓库没有关系，相互独立），便可在自己本地对此复制下来的远程git仓库进行操作，完成后可以向仓库项目的原开发者提出建议，供其决定合不合并。<br>复制别人的仓库，添加上游仓库的地址，往自己复制下来的仓库传代码，向原作者提交合并请求</p>
-<p>1.复制（克隆）别人的远程git仓库到本地（中央仓库）<br>git   clone   url                                      注：在url上添加github上的用户名和密码</p>
-<p>2.在复制到本地的仓库进行代码开发<br>git add.    git  commit  -m  “增加了某个功能”</p>
-<p>3.拉取最新的原远程git仓库。此处直接pull拉取的是自己复制下来的仓库，所以需要先跟最新的原远程git仓库建立新的remote连接后，再拉取<br>git remote  add  upsteam url            git pull  upsteam master              :q 退出默认请求设置<br>4.推送到非协作开发者自己的复制下来的最新的远程git仓库master分支上<br>git push</p>
-<p>5.此非协作开发者在此复制下来的仓库项目下创建一个合并请求，基准分支就是原仓库的master分支，对比分支就是当前操作者复制下来操作后的仓库的master分支</p>
-<p>6.原开发者在远程git仓库上查看合并请求进行分支合并<br>该远程git仓库的其他协作开发者能看到这个分支合并请求，可查看“文件变动” “代码提交状态” “对话内容” ，可进行评论、驳回、同意合并请求。（被指派的协作开发者都可以同意合并请求）</p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/git工作流/" rel="tag"># git工作流</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/二、远程git仓库使用指令/" rel="next" title="二、远程git仓库使用指令">
-                <i class="fa fa-chevron-left"></i> 二、远程git仓库使用指令
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
 
 
     <div class="post-spread">
@@ -456,6 +297,16 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
 
   
 
@@ -488,7 +339,7 @@
               <img class="site-author-image" itemprop="image" src="/images/头像.jpg" alt="Gao Qiang">
             
               <p class="site-author-name" itemprop="name">Gao Qiang</p>
-              <p class="site-description motion-element" itemprop="description">高强的博客</p>
+              <p class="site-description motion-element" itemprop="description">Stay hungry, Stay stupid</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -498,7 +349,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -509,7 +360,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -529,7 +380,66 @@
           </nav>
 
           
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/beikegaoqiang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.baidu.com" target="_blank" title="百度">
+                      
+                        <i class="fa fa-fw fa-globe"></i>百度</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.qq.com" target="_blank" title="腾讯">
+                      
+                        <i class="fa fa-fw fa-globe"></i>腾讯</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://douban.com" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -545,6 +455,13 @@
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -578,6 +495,18 @@
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style="display:none">
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style="display:none">
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客
+</span>
+</div>
+
+
 
 
         
@@ -592,11 +521,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -621,6 +545,8 @@
 
   
 
+
+  
 
 
 
@@ -662,6 +588,11 @@
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
 
   
 
@@ -700,6 +631,26 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://Gao.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/三、git工作流/';
+          this.page.identifier = '三、git工作流/';
+          this.page.title = '三、git工作流';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://Gao.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -715,10 +666,6 @@
 
 
 
-  
-
-
-
 
 
 
@@ -729,6 +676,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
